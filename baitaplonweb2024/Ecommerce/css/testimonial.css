@@ -1,0 +1,119 @@
+html {
+  font-size: 62.5%;
+  font-family: inherit;
+}
+
+.testimonial-section {
+  padding: 8rem;
+}
+
+.testimonial-section h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.testimonial-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 12rem;
+}
+
+.testimonial-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  width: 35rem;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.testimonial-box:hover {
+  transform: scale(1.05);
+  box-shadow: 1rem 1rem 5.4rem rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-box::before {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  content: "\201C";
+  font-size: 20rem;
+  color: #eee;
+  font-family: sans-serif;
+  z-index: 1;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 99;
+}
+
+.testimonial__user {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.user__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.user__tesimonial-date {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.user__rating {
+  margin-left: auto;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #088178;
+}
+
+.team-section {
+  padding: 8rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.team-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.team-box {
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  width: 45rem;
+  transition: all 0.4s;
+}
+.team-img {
+  width: 25rem;
+  height: 30rem;
+  border-radius: 1rem;
+}
+
+.team-name {
+  font-weight: 300;
+}
+
+.team-box:hover {
+  transform: scale(1.05);
+}

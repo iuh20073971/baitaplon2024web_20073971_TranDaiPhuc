@@ -1,0 +1,116 @@
+html {
+  font-size: 62.5%;
+  font-family: inherit;
+}
+
+.cart-active {
+  color: #088178;
+}
+
+.cart-section {
+  padding: 8rem;
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.cart-heading {
+  font-size: 4.6rem;
+  line-height: 5.4rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+.cart-table {
+  font-size: 1.8rem;
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+  border: 1px solid black;
+}
+
+.product-img {
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+}
+
+input {
+  background-color: inherit;
+  border: none;
+  text-align: center;
+  font-size: inherit;
+}
+
+tr th {
+  padding: 1rem;
+}
+
+th,
+td {
+  border-spacing: 0px;
+  border-collapse: separate;
+  border: 1px solid black;
+}
+
+tr:first-child {
+  background-color: #eee;
+}
+
+.btn-danger {
+  padding: 0.5rem 2rem;
+  background-color: #ff6b6b;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.btn-danger:hover {
+  background-color: #c92a2a;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+.cart-total-price-section {
+  text-align: right;
+}
+
+.order {
+  text-align: right;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  background-color: #088178;
+  color: #fff;
+  font-size: 2.4rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+tr > th {
+  text-align: center;
+}
+
+.form-row {
+  text-align: left;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.txtinfor {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.btn-orderDetail {
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.btn-orderDetail:hover,
+.btn-orderDetail:active {
+  background-color: #087f5b;
+  border: none;
+}

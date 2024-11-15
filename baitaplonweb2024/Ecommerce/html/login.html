@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="../img/weblogoicon.png" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/stylelogin.css" />
+    <script src="../js/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!---header-->
+    <header class="header-section">
+      <a href="index.html"
+        ><img src="../img/logo.png" alt="Logo" class="logo"
+      /></a>
+      <div>
+        <ul class="navbar">
+          <li class="navbar__item">
+            <a class="navbar__link" href="index.html">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="shop.html"><span>Shop</span></a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="about.html"><span>About</span></a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="contact.html"><span>Contact</span></a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link navbar__active" href="login.html"
+              ><span>Login</span></a
+            >
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link cart" href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+
+      <div class="mobile">
+        <a class="nav-link" href="cart.html"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <a class="nav-link" href="#"><i class="bar fa-solid fa-bars"></i></a>
+      </div>
+    </header>
+
+    <!---Login form--->
+    <div>
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Login
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/">
+            <img src="../img/loginIMG/instagram.png" alt=""
+          /></a>
+          <a href="https://www.facebook.com/">
+            <img src="../img/loginIMG/Facebook.png" alt=""
+          /></a>
+          <a href="https://twitter.com/">
+            <img src="../img/loginIMG/twitter.png" alt=""
+          /></a>
+        </div>
+        <form action="" id="login" class="input-group">
+          <input
+            type="text"
+            id="useridLog"
+            class="input-field"
+            placeholder="User ID"
+            required
+          />
+          <input
+            type="password"
+            id="pwdLog"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="check-box" /><span id="spanpwd"
+            >Remember Password</span
+          >
+          <button type="submit" class="submit-btn" onclick="init()">
+            Log in
+          </button>
+        </form>
+        <form
+          action=""
+          id="register"
+          class="input-group"
+          onsubmit="registerNewUser()"
+        >
+          <input
+            type="text"
+            id="useridRe"
+            class="input-field"
+            placeholder="User ID"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            class="input-field"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="pwdRe"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input
+            type="password"
+            id="confirmpassword"
+            class="input-field"
+            placeholder="Confirm password"
+            required
+          />
+          <input type="checkbox" class="check-box" /><span id="spanpwd"
+            >I agree to the
+            <a href="../html/term-of-services.html">terms and conditions</a>
+          </span>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+    <!---Footer-->>
+    <footer class="footer-section">
+      <div class="col first-col">
+        <img src="../img/logo.png" alt="" class="footer-logo" />
+        <h4 class="footer-heading">Contact</h4>
+        <p class="footer-text">
+          <strong>Address:</strong> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
+          TPHCM.
+        </p>
+        <p class="footer-text"><strong>Phone:</strong> (028) 39 851 932</p>
+        <p class="footer-text"><strong>Opening:</strong> 9:00-22:00, Mon-Sat</p>
+        <p class="footer-text">
+          <strong>Copyright</strong> &copy; 2050 by Cara, Inc. All rights
+          reserved.
+        </p>
+        <div class="follow">
+          <h4 class="footer-heading">Follow us</h4>
+          <div class="footer-icon">
+            <a class="footer-link-icon" href="http://www.facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a class="footer-link-icon" href="http://www.instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a class="footer-link-icon" href="http://www.twitter.com">
+              <i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4 class="footer-heading">About</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="about.html">About us</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Delivery Information</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="term-of-services.html"
+              >Terms of services</a
+            >
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4 class="footer-heading">My account</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Sign in</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="cart.html">View cart</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">My wishlist</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Track My Order</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col install">
+        <h4 class="footer-heading">Install app</h4>
+        <p class="footer-text">Form App Store or Google Play</p>
+        <div class="footer-row">
+          <img src="../img/pay/app.jpg" alt="" />
+          <img src="../img/pay/play.jpg" alt="" />
+        </div>
+        <p class="footer-text">Secured Payment</p>
+        <img src="../img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/e1e4744c61.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/mobile_nav.js"></script>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      }
+    </script>
+
+    <script>
+      /*
+       function registertest(){
+          
+          var id=document.getElementById('userid').value
+          var password=document.getElementById('pwd').value
+          var Email=document.getElementById('email').value
+          var confirmpwd=document.getElementById('cf-pwd').value
+
+         
+          localStorage.getItem('userid', id);
+          localStorage.getItem('pwd',password);
+          localStorage.getItem('email', Email);
+
+          return true;
+
+        let useridRe = document.getElementById("useridRe").value;
+        if (userid.trim() =="") {
+          alert("tên người dùng không được để trống");
+          return false;
+        }
+        let email = document.getElementById("email").value;
+        if (email.trim() == "") {
+          alert("email không được đẻ trống");
+          return false;
+        }
+        let pwdRe =document.getElementById("pwdRe").value;
+        if(pwd.trim()==""){
+          alert("Bạn phải nhập mật khẩu!");
+          return false;
+        }
+        let confirmpassword=document.getElementById("confirmpassword").value;
+        if( pwdRe != confirmpassword ){
+          alert("Mật khẩu không khớp, vui lòng nhập lại");
+          return false;
+        }
+        alert("Đăng ký thành công!");
+        return true;
+        }
+        */
+      $(document).ready(function () {
+        $("#register").submit(function () {
+          var useridRegister = $("#useridRe").val();
+          var pwdRegister = $("#pwdRe").val();
+          var emailRegister = $("#email").val();
+          localStorage.setItem("useridRe", useridRegister);
+          localStorage.setItem("pwdRe", pwdRegister);
+          localStorage.setItem("email", emailRegister);
+        });
+
+        $("#login").submit(function () {
+          var enteredUserid = $("#useridLog").val();
+          var enteredPass = $("#pwdLog").val();
+
+          var storedUserid = localStorage.getItem("useridRe");
+          var storedPass = localStorage.getItem("pwdRe");
+
+          if (enteredUserid == storedUserid && enteredPass == storedPass) {
+            alert("You are logged in!");
+          } else {
+            alert("Username and Password do not match!");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

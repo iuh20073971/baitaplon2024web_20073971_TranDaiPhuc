@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/weblogoicon.png" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Cart</title>
+  </head>
+  <body>
+    <header class="header-section">
+      <a href="index.html"
+        ><img src="../img/logo.png" alt="Logo" class="logo"
+      /></a>
+      <div>
+        <ul class="navbar">
+          <li class="navbar__item">
+            <a class="navbar__link" href="index.html">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="shop.html"><span>Shop</span></a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="about.html"><span>About</span></a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="contact.html"><span>Contact</span></a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="login.html"><span>Login</span></a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link cart cart-active" href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+
+      <div class="mobile">
+        <a class="nav-link" href="cart.html"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <a class="nav-link" href="#"><i class="bar fa-solid fa-bars"></i></a>
+      </div>
+    </header>
+
+    <div class="cart-section">
+      <h2 class="cart-heading">Cart</h2>
+      <table class="cart-table">
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Quantity</th>
+          <th>Prices</th>
+          <th>Total</th>
+          <th>&nbsp;</th>
+        </tr>
+
+        <!-- ass -->
+
+        <!-- <tr class="cart-row">
+          <td style="width: 25%" class="cart-name">
+            Roundtrip® Carry-on Expandable Spinner
+          </td>
+          <td>
+            <img src="../img/product/lug3.png" alt="" class="product-img" />
+          </td>
+          <td style="width: 10%">
+            <input type="number" value="1" class="quantity" />
+          </td>
+          <td class="cart-price">329.99</td>
+          <td class="cart-total">329.99</td>
+          <td><button class="btn-danger">Remove</button></td>
+        </tr>
+        <tr class="cart-row">
+          <td style="width: 25%" class="cart-name">
+            Roundtrip® Carry-on Expandable Spinner
+          </td>
+          <td>
+            <img src="../img/product/lug1.png" alt="" class="product-img" />
+          </td>
+          <td style="width: 10%">
+            <input type="number" value="1" class="quantity" />
+          </td>
+          <td class="cart-price">2500</td>
+          <td class="cart-total">3000</td>
+          <td><button class="btn-danger">Remove</button></td>
+        </tr> -->
+      </table>
+
+      <div class="cart-total-price-section" style="margin-top: 2rem">
+        <p class="total-heading">
+          <strong> Total:</strong> <span class="total-price">$0</span>
+        </p>
+      </div>
+
+      <div class="container">
+        <!-- Trigger the modal with a button -->
+        <button
+          type="button"
+          class="btn btn-orderDetail"
+          data-toggle="modal"
+          data-target="#myModal"
+          id="orderbtn"
+        >
+          Order now!
+        </button>
+      </div>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Order detail</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <form action="" id="submitOrder">
+                  <div class="form-row">
+                    <label for="">Tên người mua hàng:</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="usernameOrder"
+                      class="txtinfor"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Email:</label>
+                    <input
+                      type="email"
+                      name=""
+                      id="emailOrder"
+                      class="txtinfor"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Dien thoai:</label>
+                    <input
+                      type="tel"
+                      name=""
+                      id="phonenumberOrder"
+                      class="txtinfor"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <label for="">Dia chi:</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="addressOrder"
+                      class="txtinfor"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-row">
+                    <label for="">Payment method:</label>
+                    <select name="" id="method">
+                      <option value="banking">Banking</option>
+                      <option value="banking">
+                        Pay by cash when you get order.
+                      </option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit"  class="btn" onclick="clickOrder()">
+                      Order
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-section">
+      <div class="col first-col">
+        <img src="../img/logo.png" alt="" class="footer-logo" />
+        <h4 class="footer-heading">Contact</h4>
+        <p class="footer-text">
+          <strong>Address:</strong> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
+          TPHCM.
+        </p>
+        <p class="footer-text"><strong>Phone:</strong> (028) 39 851 932</p>
+        <p class="footer-text"><strong>Opening:</strong> 9:00-22:00, Mon-Sat</p>
+        <p class="footer-text">
+          <strong>Copyright</strong> &copy; 2050 by Cara, Inc. All rights
+          reserved.
+        </p>
+        <div class="follow">
+          <h4 class="footer-heading">Follow us</h4>
+          <div class="footer-icon">
+            <a class="footer-link-icon" href="http://www.facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a class="footer-link-icon" href="http://www.instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a class="footer-link-icon" href="http://www.twitter.com">
+              <i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4 class="footer-heading">About</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="about.html">About us</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Delivery Information</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="term-of-services.html"
+              >Terms of services</a
+            >
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4 class="footer-heading">My account</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Sign in</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">View cart</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">My wishlist</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Track My Order</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col install">
+        <h4 class="footer-heading">Install app</h4>
+        <p class="footer-text">Form App Store or Google Play</p>
+        <div class="footer-row">
+          <img src="../img/pay/app.jpg" alt="" />
+          <img src="../img/pay/play.jpg" alt="" />
+        </div>
+        <p class="footer-text">Secured Payment</p>
+        <img src="../img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/e1e4744c61.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/cart.js"></script>
+    <script>
+      function clickOrder() {
+        let username = document.getElementById("username").value;
+        if (username.trim() == "") {
+          alert("tên người mua không được để trống");
+          return false;
+        }
+        let email = document.getElementById("email").value;
+        if (email.trim() == "") {
+          alert("email không được để trống");
+          return false;
+        }
+        let phonenumber = document.getElementById("phonenumber").value;
+        if (phonenumber.trim() == "") {
+          alert("Số điện thoại không được để trống");
+          return false;
+        }
+        let address = document.getElementById("address").value;
+        if (address.trim() == "") {
+          alert("Địa chỉ không được để trống");
+          return false;
+        }
+        alert("Đặt hàng thành công!");
+        $("#myModal").modal("hide");
+        return true;
+      }
+
+      $(document).ready(function(){
+        $("#submitOrder").submit(function(){
+          var userName = $("#usernameOrder").val();
+          var Email = $("#emailOrder").val();
+          var phoneNum = $("#phonenumberOrder").val();
+          var addressOrder = $("#addressOrder").val();
+          var methodOrder = $("#method").val();
+
+          localStorage.setItem("usernameOrder", userName);
+          localStorage.setItem("emailOrder", Email);
+          localStorage.setItem("phonenumberOrder", phoneNum);
+          localStorage.setItem("addressOrder", addressOrder);
+          localStorage.setItem("method", methodOrder);
+        })
+      });
+    
+    </script>
+  </body>
+</html>

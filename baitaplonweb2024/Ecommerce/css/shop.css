@@ -1,0 +1,130 @@
+.product-section {
+  width: 1300px;
+  padding: 9.6rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+/*
+  ====================================PRODUCT LIST================================
+*/
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4.5rem;
+}
+
+.product-item {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-box {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem 4rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #c3fae8;
+  transition: all 0.4s;
+  border-radius: 0.5rem;
+}
+
+.product-box:hover {
+  transform: scale(1.05);
+  box-shadow: 1rem 1rem 5.4rem rgba(0, 0, 0, 0.3);
+}
+
+.product-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.product-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.product-price {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.product-add-cart {
+  font-size: 2.4rem;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #087f5b;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.4s;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+.product-add-cart:hover {
+  background-color: #088178;
+  transform: scale(1.15);
+  box-shadow: 1rem 1rem 5.4rem rgba(0, 0, 0, 0.3);
+}
+
+.product-heading {
+  text-align: center;
+}
+
+.product-row {
+  display: flex;
+  gap: 4.5rem;
+  align-items: flex-start;
+}
+
+.notification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.suscessful {
+  display: none;
+}
+
+.suscessful-box {
+  z-index: 1000;
+
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  width: 50rem;
+  height: 25rem;
+  display: flex;
+  gap: 3.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--sucessful {
+  padding: 1rem 8rem;
+  background-color: #087f5b;
+  cursor: pointer;
+}
+
+.noti__active {
+  display: block;
+}

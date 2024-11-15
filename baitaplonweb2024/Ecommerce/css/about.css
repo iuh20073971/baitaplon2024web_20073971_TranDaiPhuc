@@ -1,0 +1,199 @@
+html {
+  font-size: 62.5%;
+  font-family: inherit;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+}
+
+.our-story__row {
+  margin-bottom: 5rem;
+}
+
+.about-us {
+  padding: 8rem 0;
+  width: 130rem;
+  margin: 0 auto;
+}
+
+.about-us > * {
+  width: 100%;
+  text-align: center;
+}
+
+.about-us--heading {
+  margin-bottom: 4.5rem;
+}
+
+.our-story__row {
+  display: flex;
+  gap: 6.5rem;
+}
+
+.our-story__text {
+  line-height: 2.4;
+  font-size: 1.8rem;
+  flex: 0 0 55%;
+}
+
+.our-product__information,
+.our-mission__information {
+  font-size: 1.6rem;
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-product__image {
+  flex: 1;
+}
+
+.os-img {
+  height: 60rem;
+}
+
+.op-img {
+  height: 60rem;
+}
+
+.our-product__text,
+.our-mission__text {
+  line-height: 3;
+  font-size: 1.8rem;
+  width: 80%;
+  text-align: center;
+}
+
+.our--collaboration {
+  margin-bottom: 20rem;
+}
+
+.our--collaboration--heading {
+  margin-bottom: 10rem;
+}
+
+.collaboration--img {
+  width: 100%;
+  display: flex;
+}
+
+.collaboration--img > * {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 15rem;
+}
+
+@media (max-width: 85rem) {
+  html {
+    font-size: 58.5%;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .mobile {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    height: 100vh;
+    width: 30rem;
+    background-color: #e3e6f3;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.1);
+    padding: 8rem 0 0 1rem;
+    list-style: none;
+    transition: all 0.4s;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    font-size: 2.4rem;
+    color: #222;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+  .navbar__item {
+    margin-bottom: 2.5rem;
+  }
+
+  .our-story__row {
+    padding: 5rem;
+    padding-right: 10rem;
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  .about-us--heading {
+    text-align: center;
+  }
+
+  .our-product__text,
+  .our-mission__text {
+    font-size: 1.8rem;
+    padding-right: 5rem;
+  }
+
+  .our--collaboration {
+    margin-bottom: 2.5rem;
+  }
+
+  .collaboration--img {
+    justify-content: space-around;
+    padding: 0rem 10rem;
+  }
+
+  .collaboration--img > * {
+    width: 25rem;
+    height: 25rem;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 55rem) {
+  html {
+    font-size: 58.5%;
+  }
+
+  .our-story__row {
+    display: flex;
+    gap: 3.5rem;
+    flex-direction: column;
+  }
+
+  .our-story__information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-story__text,
+  .our-product__text,
+  .our-mission__text {
+    width: 75%;
+    text-align: center;
+  }
+}
